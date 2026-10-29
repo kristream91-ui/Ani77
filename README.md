@@ -158,9 +158,39 @@ popularity tiebreak. No ML dependency, no model file. The frontend ships a mirro
 
 ## Deploying
 
-**Vercel** (recommended — this is a Next app): import the repo, set the same env vars, done.
+### Render (blueprint included)
 
-**Firebase Hosting / any static CDN** — the app is fully client-side, so a static export works:
+`render.yaml` defines both services, so Render can create them in one go:
+
+1. [dashboard.render.com](https://dashboard.render.com) → **New +** → **Blueprint**
+2. Pick this repo. Render reads `render.yaml` and shows two services:
+   - `ani77-api` — FastAPI, `rootDir: backend`, health check on `/api/health`
+   - `ani77` — Next.js, `npm ci && npm run build`, started with `next start`
+3. **Apply**. `NEXT_PUBLIC_API_BASE` is wired to the API's URL automatically via
+   `fromService`, so you don't have to copy URLs around.
+
+Both are `plan: free` in `region: singapore`.
+
+Three things to know about the free tier:
+
+- Instances **spin down after ~15 minutes idle** and take ~50s to wake. The frontend is
+  unaffected — if the API is cold, `lib/api.js` falls back to the bundled catalog and the UI
+  still renders. Only the live `/api/*` calls are slow on the first request.
+- `NEXT_PUBLIC_*` values are **inlined at build time**. If the API URL ever changes, trigger a
+  redeploy of the web service, not just a restart.
+- If `singapore` isn't offered for your account, change `region:` to `oregon` or `frankfurt`
+  and re-apply.
+
+To run the frontend on its own, delete the `ani77-api` block and the `NEXT_PUBLIC_API_BASE`
+env var from `render.yaml` — the app works fully standalone on the bundled catalog.
+
+### Vercel
+
+Import the repo, set the same env vars, done.
+
+### Firebase Hosting / any static CDN
+
+The app is fully client-side, so a static export works anywhere:
 
 ```bash
 npm run build:static     # emits ./out
