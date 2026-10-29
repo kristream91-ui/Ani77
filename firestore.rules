@@ -1,0 +1,36 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function signedIn() { return request.auth != null; }
+    function isOwner(uid) { return signedIn() && request.auth.uid == uid; }
+
+    // users/{uid} — profile + preferences
+    match /users/{uid} {
+      allow read: if isOwner(uid);
+      allow create, update: if isOwner(uid)
+        && request.resource.data.uid == uid
+        && request.resource.data.keys().hasOnly(['uid','displayName','photoURL','locale','pref','updatedAt']);
+      allow delete: if isOwner(uid);
+    }
+
+    // users/{uid}/list/{animeId} — watchlist entries
+    match /users/{uid}/list/{animeId} {
+      allow read, delete: if isOwner(uid);
+      allow create, update: if isOwner(uid)
+        && request.resource.data.keys().hasOnly(['animeId','status','score','verdict','addedAt','updatedAt'])
+        && request.resource.data.status in ['watching','planned','completed','dropped','onhold'];
+    }
+
+    // users/{uid}/progress/{animeId} — episode progress
+    match /users/{uid}/progress/{animeId} {
+      allow read, delete: if isOwner(uid);
+      allow create, update: if isOwner(uid)
+        && request.resource.data.keys().hasOnly(['animeId','episode','seconds','duration','updatedAt'])
+        && request.resource.data.episode is int
+        && request.resource.data.episode >= 0;
+    }
+
+    // Public catalog is served by the Python API, not by Firestore writes from clients.
+    match /catalog/{doc=**} { allow read: if true; allow write: if false; }
+  }
+}
