@@ -27,7 +27,13 @@ const devanagari = Noto_Sans_Devanagari({
 })
 
 export const metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'),
+  // RENDER_EXTERNAL_URL is set by Render at runtime, so OG/social URLs resolve
+  // correctly even if NEXT_PUBLIC_SITE_URL was never configured.
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_SITE_URL ||
+      process.env.RENDER_EXTERNAL_URL ||
+      'http://localhost:3000'
+  ),
   title: 'Ani77 — Anime, desi style',
   description:
     'Ani77 — anime for India, Nepal and Bangladesh. Japanese original plus seven dub tracks, watchlists and recommendations.',
