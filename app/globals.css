@@ -1,0 +1,264 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --accent: #00a3ff;
+  --accent-2: #0057ff;
+}
+
+/* ------------------------------------------------------------------ base */
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    @apply bg-ink-950 text-zinc-100 antialiased;
+    font-feature-settings: 'cv02', 'cv03', 'cv04';
+    overscroll-behavior-y: none;
+  }
+
+  ::selection {
+    @apply bg-brand text-ink-950;
+  }
+
+  :focus-visible {
+    @apply outline-none ring-2 ring-brand/70 ring-offset-2 ring-offset-ink-950;
+    border-radius: 8px;
+  }
+
+  input[type='range'] {
+    accent-color: var(--accent);
+  }
+
+  @media (min-width: 1024px) {
+    ::-webkit-scrollbar { width: 10px; height: 10px; }
+    ::-webkit-scrollbar-track { @apply bg-ink-950; }
+    ::-webkit-scrollbar-thumb {
+      @apply rounded-full bg-ink-700;
+      border: 2px solid theme('colors.ink.950');
+    }
+    ::-webkit-scrollbar-thumb:hover { @apply bg-ink-600; }
+  }
+}
+
+/* ------------------------------------------------------------- components */
+
+@layer components {
+  /* surfaces ---------------------------------------------------------- */
+  .surface {
+    @apply rounded-xl border border-white/[0.07] bg-ink-850/60;
+  }
+  .surface-hover {
+    @apply transition-colors duration-300 hover:border-brand/40;
+  }
+  .panel {
+    @apply rounded-2xl border border-white/5 bg-ink-850/50;
+  }
+
+  /* buttons ----------------------------------------------------------- */
+  .btn {
+    @apply inline-flex shrink-0 items-center justify-center gap-2 rounded-full font-semibold
+           transition-all duration-300 ease-smooth active:scale-95;
+  }
+  .btn-primary {
+    @apply btn text-ink-950 shadow-glow hover:shadow-glowLg;
+    background-image: linear-gradient(120deg, var(--accent), var(--accent-2));
+  }
+  .btn-secondary {
+    @apply btn border border-white/15 bg-white/5 text-white hover:border-brand/60 hover:bg-brand/10;
+  }
+  .btn-quiet {
+    @apply btn text-zinc-300 hover:text-white;
+  }
+  .btn-icon {
+    @apply grid size-10 shrink-0 place-items-center rounded-full border border-white/10
+           text-zinc-500 transition-all duration-300 ease-smooth
+           hover:border-white/25 hover:text-white active:scale-90;
+  }
+  .btn-xs { @apply h-8 px-3 text-2xs; }
+  .btn-sm { @apply h-9 px-4 text-xs; }
+  .btn-md { @apply h-10 px-5 text-tiny+; }
+  .btn-lg { @apply h-11 px-6 text-sm; }
+
+  /* chips / filters --------------------------------------------------- */
+  .chip {
+    @apply shrink-0 rounded-full px-3.5 py-1.5 text-xs font-semibold
+           transition-all duration-300 ease-smooth active:scale-95;
+  }
+  .chip-off {
+    @apply border border-white/10 bg-white/5 text-zinc-400 hover:border-brand/50 hover:text-white;
+  }
+  .chip-on {
+    @apply text-ink-950 shadow-glow;
+    background-image: linear-gradient(120deg, var(--accent), var(--accent-2));
+  }
+
+  /* form controls ----------------------------------------------------- */
+  .field {
+    @apply h-10 w-full rounded-full border border-white/10 bg-ink-850 text-sm text-zinc-200
+           outline-none transition-all duration-300 ease-smooth
+           placeholder:text-zinc-600 focus:border-brand/50 focus:shadow-glow;
+  }
+  .select {
+    @apply h-9 cursor-pointer appearance-none rounded-full border border-white/10 bg-ink-850
+           px-3 text-xs text-zinc-300 outline-none transition-colors duration-300
+           hover:border-brand/50 hover:text-white;
+  }
+
+  /* poster art -------------------------------------------------------- */
+  .poster-art {
+    container-type: inline-size;
+    position: relative;
+    overflow: hidden;
+    background-image: linear-gradient(160deg, var(--p1, #00a3ff), var(--p2, #0057ff));
+  }
+  /* soft key light top-left + a vignette bottom-right: reads as art, not a flat block */
+  .poster-art::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      radial-gradient(120% 95% at 18% -5%, rgba(255, 255, 255, 0.26), transparent 56%),
+      radial-gradient(110% 90% at 62% 118%, rgba(0, 0, 0, 0.6), transparent 66%);
+  }
+  /* fine dot texture instead of harsh stripes */
+  .poster-art::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    @apply bg-dot-grid bg-dots opacity-[0.07];
+  }
+  .poster-mark {
+    @apply absolute inset-0 grid select-none place-items-center font-display font-extrabold
+           leading-none tracking-tighter text-white/20;
+    font-size: 2.6rem;      /* fallback */
+    font-size: 30cqw;       /* scales with the card */
+  }
+  .poster-scrim {
+    @apply absolute inset-0 bg-gradient-to-t from-black/90 via-black/25 to-transparent;
+  }
+
+  .palette-grad {
+    background-image: linear-gradient(120deg, var(--p1, #00a3ff), var(--p2, #0057ff));
+  }
+
+  /* tinted section band (Most Interested) ----------------------------- */
+  .band {
+    background-image:
+      radial-gradient(90% 140% at 4% -40%, rgba(0, 163, 255, 0.34), transparent 62%),
+      radial-gradient(80% 130% at 78% -30%, rgba(124, 58, 237, 0.34), transparent 66%);
+  }
+
+  /* big outlined rank numeral ----------------------------------------- */
+  .rank-num {
+    @apply font-display font-extrabold leading-none tracking-tighter;
+    font-size: 2.75rem;
+    background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.22));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .spotlight {
+    background-image: radial-gradient(circle at 70% 0%, #fff, transparent 60%);
+  }
+
+  /* type -------------------------------------------------------------- */
+  .label {
+    @apply text-2xs font-semibold uppercase tracking-wide text-zinc-500;
+  }
+  .section-title {
+    @apply truncate font-display text-lg font-bold tracking-tight text-white lg:text-xl;
+  }
+
+  /* loading ----------------------------------------------------------- */
+  .skeleton {
+    @apply relative overflow-hidden rounded-xl bg-ink-850;
+  }
+  .skeleton::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    @apply animate-shimmer bg-gradient-to-r from-transparent via-white/[0.06] to-transparent;
+  }
+}
+
+/* -------------------------------------------------------------- utilities */
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar { display: none; }
+  .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+  .glass {
+    background: color-mix(in srgb, #070b14 72%, transparent);
+    backdrop-filter: blur(20px) saturate(150%);
+  }
+
+  .accent-text { color: var(--accent); }
+  .accent-grad { background-image: linear-gradient(120deg, var(--accent), var(--accent-2)); }
+
+  .text-grad {
+    background-image: linear-gradient(100deg, #fff 10%, var(--accent) 55%, #22d3ee 95%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .text-balance { text-wrap: balance; }
+
+  .safe-bottom { padding-bottom: calc(env(safe-area-inset-bottom, 0px) + 0.5rem); }
+
+  /* soft edge fade on horizontal rails */
+  .edge-fade {
+    mask-image: linear-gradient(to right, transparent 0, black 18px, black calc(100% - 28px), transparent 100%);
+    -webkit-mask-image: linear-gradient(to right, transparent 0, black 18px, black calc(100% - 28px), transparent 100%);
+  }
+
+  /* light sweep across a button on hover */
+  .sheen { position: relative; overflow: hidden; }
+  .sheen::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.28), transparent);
+    transform: translateX(-120%) skewX(-12deg);
+    pointer-events: none;
+  }
+  .sheen:hover::after { animation: sweep 1s ease-out; }
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(18px);
+    transition: opacity 0.6s cubic-bezier(0.22, 0.68, 0.28, 1),
+      transform 0.6s cubic-bezier(0.22, 0.68, 0.28, 1);
+    will-change: opacity, transform;
+  }
+  .reveal.in { opacity: 1; transform: none; }
+
+  /* card lift, only where a real pointer can hover */
+  @media (hover: hover) {
+    .card-lift {
+      transition: transform 0.38s cubic-bezier(0.22, 0.68, 0.28, 1), box-shadow 0.38s ease,
+        border-color 0.3s ease;
+    }
+    .card-lift:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 26px 60px -24px rgba(0, 163, 255, 0.55);
+    }
+  }
+}
+
+/* respect the OS setting — kills every entrance animation */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+  .reveal { opacity: 1 !important; transform: none !important; }
+}
