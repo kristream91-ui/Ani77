@@ -103,8 +103,10 @@ NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=...
 NEXT_PUBLIC_FIREBASE_APP_ID=...
 ```
 
-3. Enable **Authentication → Google**.
-4. Enable **Firestore** and deploy the rules:
+3. Enable **Authentication → Google**, then under **Settings → Authorized domains** add the
+   domain you deploy to (e.g. `ani77-arf9.onrender.com`). Popup sign-in fails with
+   `auth/unauthorized-domain` until you do — this is the most common setup mistake.
+4. Enable **Firestore** (production mode) and deploy the rules:
 
 ```bash
 npm i -g firebase-tools
@@ -112,9 +114,17 @@ firebase login && firebase use --add
 firebase deploy --only firestore:rules,firestore:indexes
 ```
 
-The moment those keys exist, `loadFirebase()` switches on: Google sign-in works and the
-watchlist mirrors to `users/{uid}/list/{animeId}` and `users/{uid}/progress/{animeId}`. Without
-them the app never touches the network for user data.
+The moment those keys exist, `loadFirebase()` switches on. On sign-in the app:
+
+- pulls `users/{uid}/list/*` and `users/{uid}/progress/*` down and merges them over local state
+- rebuilds verdicts from the `verdict` field on each list document
+- writes a `users/{uid}` profile document
+- resets the device's data if a *different* account signs in, so two people sharing a phone
+  never see each other's watchlist
+
+The Profile card shows a live sync pill — green **Synced to Firestore**, amber while syncing, or
+red **Sync failed** when Firestore rules reject a write. Without keys the app never touches the
+network for user data.
 
 ## Routes
 

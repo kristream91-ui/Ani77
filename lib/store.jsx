@@ -7,6 +7,7 @@ const DEFAULTS = {
   list: {},          // { animeId: { status, score, addedAt } }
   progress: {},      // { animeId: { episode, updatedAt } }
   verdicts: {},      // { animeId: 'skip' | 'timepass' | 'goforit' | 'perfection' }
+  ownerUid: null,    // which account this device's data belongs to
   prefs: { ui: 'en', dub: 'Hindi', accent: 'ani77' },
   recent: []         // recent searches
 }
@@ -39,6 +40,7 @@ function read() {
       list: parsed.list || {},
       progress: parsed.progress || {},
       verdicts: parsed.verdicts || {},
+      ownerUid: parsed.ownerUid || null,
       prefs: { ...DEFAULTS.prefs, ...(parsed.prefs || {}) },
       recent: parsed.recent || []
     }
@@ -53,6 +55,7 @@ export function AppProvider({ children }) {
   const [state, setState] = useState(read)
   const [user, setUser] = useState(null)
   const [authReady, setAuthReady] = useState(!firebaseConfigured)
+  const [syncStatus, setSyncStatus] = useState('idle') // idle | syncing | synced | error
   const [toast, setToast] = useState(null)
   const fb = useRef(null)
   const toastTimer = useRef(null)
@@ -83,29 +86,83 @@ export function AppProvider({ children }) {
   useEffect(() => {
     if (!firebaseConfigured) return
     let unsub = () => {}
+
     ;(async () => {
       try {
         const f = await loadFirebase()
         if (!f) return
         fb.current = f
+
         unsub = f.authMod.onAuthStateChanged(f.auth, async (u) => {
           setUser(u)
           setAuthReady(true)
-          if (!u) return
-          // hydrate cloud list/progress into local state
+          if (!u) {
+            setSyncStatus('idle')
+            return
+          }
+
+          setSyncStatus('syncing')
+          const { db, fsMod } = f
+
           try {
-            const snap = await f.fsMod.getDocs(f.fsMod.collection(f.db, 'users', u.uid, 'list'))
+            // A different account signing in on this device starts clean, so one
+            // person's watchlist can never bleed into another's.
+            setState((s) =>
+              s.ownerUid && s.ownerUid !== u.uid
+                ? { ...s, list: {}, progress: {}, verdicts: {}, ownerUid: u.uid }
+                : { ...s, ownerUid: u.uid }
+            )
+
+            const [listSnap, progSnap] = await Promise.all([
+              fsMod.getDocs(fsMod.collection(db, 'users', u.uid, 'list')),
+              fsMod.getDocs(fsMod.collection(db, 'users', u.uid, 'progress'))
+            ])
+
             const cloudList = {}
-            snap.forEach((d) => (cloudList[d.id] = d.data()))
-            setState((s) => ({ ...s, list: { ...cloudList, ...s.list } }))
+            listSnap.forEach((d) => (cloudList[d.id] = d.data()))
+
+            const cloudProgress = {}
+            progSnap.forEach((d) => (cloudProgress[d.id] = d.data()))
+
+            // verdicts live on the list documents, so rebuild the map from them
+            const cloudVerdicts = {}
+            Object.entries(cloudList).forEach(([id, entry]) => {
+              if (entry?.verdict) cloudVerdicts[id] = entry.verdict
+            })
+
+            setState((s) => ({
+              ...s,
+              list: { ...s.list, ...cloudList },
+              progress: { ...s.progress, ...cloudProgress },
+              verdicts: { ...s.verdicts, ...cloudVerdicts }
+            }))
+
+            // profile document — keeps the users/{uid} collection meaningful
+            await fsMod.setDoc(
+              fsMod.doc(db, 'users', u.uid),
+              {
+                uid: u.uid,
+                displayName: u.displayName || '',
+                photoURL: u.photoURL || '',
+                locale: (typeof navigator !== 'undefined' && navigator.language) || 'en-IN',
+                pref: 'sub',
+                updatedAt: Date.now()
+              },
+              { merge: true }
+            )
+
+            setSyncStatus('synced')
           } catch {
-            /* offline or rules block — local state still works */
+            // most often: Firestore rules not deployed, or the API not enabled yet
+            setSyncStatus('error')
           }
         })
       } catch {
         setAuthReady(true)
+        setSyncStatus('error')
       }
     })()
+
     return () => unsub()
   }, [])
 
@@ -140,8 +197,10 @@ export function AppProvider({ children }) {
       const ref = fsMod.doc(db, 'users', user.uid, kind, animeId)
       if (payload === null) await fsMod.deleteDoc(ref)
       else await fsMod.setDoc(ref, payload, { merge: true })
+      setSyncStatus('synced')
     } catch {
-      /* non-fatal: local state is the source of truth for the session */
+      // rules rejected the write, or the device is offline
+      setSyncStatus('error')
     }
   }, [user])
 
@@ -223,6 +282,7 @@ export function AppProvider({ children }) {
     ...state,
     user,
     authReady,
+    syncStatus,
     firebaseConfigured,
     statusOf: (id) => state.list[id]?.status || null,
     verdictOf: (id) => state.verdicts[id] || null,
@@ -237,7 +297,7 @@ export function AppProvider({ children }) {
     setPrefs,
     addRecent,
     resetAll
-  }), [state, user, authReady, notify, signIn, signOut, setStatus, removeFromList, rate, setVerdict, setProgress, setPrefs, addRecent, resetAll])
+  }), [state, user, authReady, syncStatus, notify, signIn, signOut, setStatus, removeFromList, rate, setVerdict, setProgress, setPrefs, addRecent, resetAll])
 
   return (
     <Ctx.Provider value={value}>

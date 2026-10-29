@@ -41,7 +41,7 @@ function Row({ label, hint, children }) {
 export default function Profile() {
   const t = useT()
   const {
-    user, prefs, setPrefs, list, progress,
+    user, prefs, setPrefs, list, progress, syncStatus,
     signIn, signOut, resetAll, firebaseConfigured
   } = useApp()
 
@@ -75,6 +75,32 @@ export default function Profile() {
               <p className="mt-0.5 truncate text-[11px] text-zinc-500">
                 {user?.email || (firebaseConfigured ? 'Not signed in' : 'Demo mode · local storage')}
               </p>
+              {user && (
+                <p
+                  className={`mt-1 flex items-center gap-1.5 text-2xs font-medium ${
+                    syncStatus === 'error'
+                      ? 'text-red-400'
+                      : syncStatus === 'synced'
+                        ? 'text-emerald-400'
+                        : 'text-amber-400'
+                  }`}
+                >
+                  <span
+                    className={`size-1.5 rounded-full ${
+                      syncStatus === 'error'
+                        ? 'bg-red-400'
+                        : syncStatus === 'synced'
+                          ? 'bg-emerald-400'
+                          : 'bg-amber-400'
+                    }`}
+                  />
+                  {syncStatus === 'error'
+                    ? 'Sync failed — check Firestore rules'
+                    : syncStatus === 'synced'
+                      ? 'Synced to Firestore'
+                      : 'Syncing…'}
+                </p>
+              )}
             </div>
           </div>
           <button
