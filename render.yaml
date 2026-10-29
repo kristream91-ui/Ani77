@@ -1,0 +1,41 @@
+# Render Blueprint — https://render.com/docs/blueprint-spec
+# In Render: New + > Blueprint > pick this repo. Both services deploy together.
+services:
+  # ---------------------------------------------------------------- Python API
+  - type: web
+    name: ani77-api
+    runtime: python
+    plan: free
+    region: singapore
+    rootDir: backend
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /api/health
+    autoDeploy: true
+    envVars:
+      - key: PYTHON_VERSION
+        value: "3.12.6"
+      - key: CORS_ORIGINS
+        value: "*"
+
+  # ------------------------------------------------------------- Next.js app
+  - type: web
+    name: ani77
+    runtime: node
+    plan: free
+    region: singapore
+    buildCommand: npm ci && npm run build
+    startCommand: npx next start -p $PORT
+    healthCheckPath: /
+    autoDeploy: true
+    envVars:
+      - key: NODE_VERSION
+        value: "20.11.1"
+      # Wired to the API service above. NEXT_PUBLIC_* is inlined at build time,
+      # so this must be set before the build runs — the blueprint handles that.
+      # Delete this block to run the app standalone on the bundled catalog.
+      - key: NEXT_PUBLIC_API_BASE
+        fromService:
+          type: web
+          name: ani77-api
+          envVarKey: RENDER_EXTERNAL_URL
