@@ -1,0 +1,1568 @@
+{
+  "count": 40,
+  "audioLanguages": [
+    "Japanese",
+    "English",
+    "Hindi",
+    "Tamil",
+    "Telugu",
+    "Bengali",
+    "Malayalam",
+    "Kannada"
+  ],
+  "languages": {
+    "Japanese": "Japanese (Original)",
+    "English": "English",
+    "Hindi": "Hindi",
+    "Tamil": "Tamil",
+    "Telugu": "Telugu",
+    "Bengali": "Bengali",
+    "Malayalam": "Malayalam",
+    "Kannada": "Kannada"
+  },
+  "anime": [
+    {
+      "id": "jujutsu-kaisen",
+      "title": "Jujutsu Kaisen",
+      "year": 2020,
+      "type": "TV",
+      "episodes": 24,
+      "status": "Finished",
+      "score": 8.6,
+      "popularity": 98,
+      "studio": "MAPPA",
+      "genres": [
+        "Action",
+        "Supernatural",
+        "Shounen"
+      ],
+      "dubs": [
+        "Japanese",
+        "English",
+        "Hindi",
+        "Tamil",
+        "Telugu",
+        "Bengali",
+        "Malayalam",
+        "Kannada"
+      ],
+      "verdicts": {
+        "skip": 6,
+        "timepass": 11,
+        "goforit": 41,
+        "perfection": 42
+      },
+      "synopsis": "Yuji Itadori swallows a cursed finger and is pulled into a hidden war between sorcerers and curses.",
+      "palette": [
+        "#ff2e63",
+        "#7c3aed"
+      ],
+      "posterUrl": null,
+      "runtime": "24 min",
+      "slug": "jujutsu-kaisen"
+    },
+    {
+      "id": "demon-slayer",
+      "title": "Demon Slayer: Kimetsu no Yaiba",
+      "year": 2019,
+      "type": "TV",
+      "episodes": 26,
+      "status": "Ongoing",
+      "score": 8.5,
+      "popularity": 99,
+      "studio": "ufotable",
+      "genres": [
+        "Action",
+        "Supernatural",
+        "Historical"
+      ],
+      "dubs": [
+        "Japanese",
+        "English",
+        "Hindi",
+        "Tamil",
+        "Telugu",
+        "Bengali",
+        "Malayalam",
+        "Kannada"
+      ],
+      "verdicts": {
+        "skip": 8,
+        "timepass": 13,
+        "goforit": 40,
+        "perfection": 39
+      },
+      "synopsis": "Tanjiro Kamado joins the Demon Slayer Corps after his family is slaughtered and his sister turned.",
+      "palette": [
+        "#06b6d4",
+        "#1e3a8a"
+      ],
+      "posterUrl": null,
+      "runtime": "24 min",
+      "slug": "demon-slayer"
+    },
+    {
+      "id": "attack-on-titan",
+      "title": "Attack on Titan",
+      "year": 2013,
+      "type": "TV",
+      "episodes": 25,
+      "status": "Finished",
+      "score": 9.0,
+      "popularity": 100,
+      "studio": "Wit Studio",
+      "genres": [
+        "Action",
+        "Drama",
+        "Fantasy"
+      ],
+      "dubs": [
+        "Japanese",
+        "English",
+        "Hindi",
+        "Tamil",
+        "Telugu",
+        "Bengali",
+        "Malayalam",
+        "Kannada"
+      ],
+      "verdicts": {
+        "skip": 2,
+        "timepass": 2,
+        "goforit": 42,
+        "perfection": 54
+      },
+      "synopsis": "Humanity fights for survival behind giant walls against man-eating Titans.",
+      "palette": [
+        "#78350f",
+        "#b45309"
+      ],
+      "posterUrl": null,
+      "runtime": "24 min",
+      "slug": "attack-on-titan"
+    },
+    {
+      "id": "naruto",
+      "title": "Naruto",
+      "year": 2002,
+      "type": "TV",
+      "episodes": 220,
+      "status": "Finished",
+      "score": 8.4,
+      "popularity": 97,
+      "studio": "Pierrot",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Shounen"
+      ],
+      "dubs": [
+        "Japanese",
+        "English",
+        "Hindi",
+        "Tamil",
+        "Telugu",
+        "Bengali",
+        "Malayalam",
+        "Kannada"
+      ],
+      "verdicts": {
+        "skip": 11,
+        "timepass": 19,
+        "goforit": 36,
+        "perfection": 34
+      },
+      "synopsis": "A loud ninja with a sealed nine-tailed fox chases the title of Hokage.",
+      "palette": [
+        "#f97316",
+        "#facc15"
+      ],
+      "posterUrl": null,
+      "runtime": "24 min",
+      "slug": "naruto"
+    },
+    {
+      "id": "naruto-shippuden",
+      "title": "Naruto: Shippuden",
+      "year": 2007,
+      "type": "TV",
+      "episodes": 500,
+      "status": "Finished",
+      "score": 8.7,
+      "popularity": 96,
+      "studio": "Pierrot",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Shounen"
+      ],
+      "dubs": [
+        "Japanese",
+        "English",
+        "Hindi",
+        "Tamil",
+        "Telugu",
+        "Bengali",
+        "Malayalam",
+        "Kannada"
+      ],
+      "verdicts": {
+        "skip": 5,
+        "timepass": 9,
+        "goforit": 42,
+        "perfection": 44
+      },
+      "synopsis": "Naruto returns from training to face the Akatsuki and a war that decides the shinobi world.",
+      "palette": [
+        "#ea580c",
+        "#7c2d12"
+      ],
+      "posterUrl": null,
+      "runtime": "24 min",
+      "slug": "naruto-shippuden"
+    },
+    {
+      "id": "one-piece",
+      "title": "One Piece",
+      "year": 1999,
+      "type": "TV",
+      "episodes": 1120,
+      "status": "Ongoing",
+      "score": 8.7,
+      "popularity": 100,
+      "studio": "Toei Animation",
+      "genres": [
+        "Adventure",
+        "Action",
+        "Fantasy"
+      ],
+      "dubs": [
+        "Japanese",
+        "English",
+        "Hindi",
+        "Tamil",
+        "Telugu",
+        "Bengali",
+        "Malayalam",
+        "Kannada"
+      ],
+      "verdicts": {
+        "skip": 3,
+        "timepass": 5,
+        "goforit": 45,
+        "perfection": 47
+      },
+      "synopsis": "Monkey D. Luffy sails the Grand Line with his crew in search of the legendary One Piece.",
+      "palette": [
+        "#dc2626",
+        "#f59e0b"
+      ],
+      "posterUrl": null,
+      "runtime": "24 min",
+      "slug": "one-piece"
+    },
+    {
+      "id": "death-note",
+      "title": "Death Note",
+      "year": 2006,
+      "type": "TV",
+      "episodes": 37,
+      "status": "Finished",
+      "score": 8.6,
+      "popularity": 95,
+      "studio": "Madhouse",
+      "genres": [
+        "Mystery",
+        "Thriller",
+        "Psychological"
+      ],
+      "dubs": [
+        "Japanese",
+        "English",
+        "Hindi",
+        "Tamil",
+        "Telugu",
+        "Bengali",
+        "Malayalam",
+        "Kannada"
+      ],
+      "verdicts": {
+        "skip": 8,
+        "timepass": 12,
+        "goforit": 40,
+        "perfection": 40
+      },
+      "synopsis": "A student finds a notebook that kills anyone whose name is written in it.",
+      "palette": [
+        "#111827",
+        "#dc2626"
+      ],
+      "posterUrl": null,
+      "runtime": "24 min",
+      "slug": "death-note"
+    },
+    {
+      "id": "fma-brotherhood",
+      "title": "Fullmetal Alchemist: Brotherhood",
+      "year": 2009,
+      "type": "TV",
+      "episodes": 64,
+      "status": "Finished",
+      "score": 9.1,
+      "popularity": 93,
+      "studio": "Bones",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Drama"
+      ],
+      "dubs": [
+        "Japanese",
+        "English",
+        "Hindi",
+        "Tamil",
+        "Telugu",
+        "Bengali",
+        "Malayalam"
+      ],
+      "verdicts": {
+        "skip": 2,
+        "timepass": 2,
+        "goforit": 43,
+        "perfection": 53
+      },
+      "synopsis": "Two alchemist brothers hunt the Philosopher's Stone to restore their bodies.",
+      "palette": [
+        "#b91c1c",
+        "#facc15"
+      ],
+      "posterUrl": null,
+      "runtime": "24 min",
+      "slug": "fma-brotherhood"
+    },
+    {
+      "id": "spy-x-family",
+      "title": "Spy x Family",
+      "year": 2022,
+      "type": "TV",
+      "episodes": 25,
+      "status": "Ongoing",
+      "score": 8.5,
+      "popularity": 94,
+      "studio": "Wit Studio",
+      "genres": [
+        "Comedy",
+        "Action",
+        "Slice of Life"
+      ],
+      "dubs": [
+        "Japanese",
+        "English",
+        "Hindi",
+        "Tamil",
+        "Telugu",
+        "Bengali",
+        "Malayalam",
+        "Kannada"
+      ],
+      "verdicts": {
+        "skip": 6,
+        "timepass": 10,
+        "goforit": 43,
+        "perfection": 41
+      },
+      "synopsis": "A spy, an assassin and a telepath pretend to be a family — and none of them know it.",
+      "palette": [
+        "#f472b6",
+        "#8b5cf6"
+      ],
+      "posterUrl": null,
+      "runtime": "24 min",
+      "slug": "spy-x-family"
+    },
+    {
+      "id": "chainsaw-man",
+      "title": "Chainsaw Man",
+      "year": 2022,
+      "type": "TV",
+      "episodes": 12,
+      "status": "Finished",
+      "score": 8.5,
+      "popularity": 92,
+      "studio": "MAPPA",
+      "genres": [
+        "Action",
+        "Dark Fantasy",
+        "Supernatural"
+      ],
+      "dubs": [
+        "Japanese",
+        "English",
+        "Hindi",
+        "Tamil",
+        "Telugu",
+        "Bengali",
+        "Malayalam",
+        "Kannada"
+      ],
+      "verdicts": {
+        "skip": 6,
+        "timepass": 11,
+        "goforit": 42,
+        "perfection": 41
+      },
+      "synopsis": "Denji fuses with his chainsaw devil and gets drafted into public safety.",
+      "palette": [
+        "#dc2626",
+        "#111827"
+      ],
+      "posterUrl": null,
+      "runtime": "24 min",
+      "slug": "chainsaw-man"
+    },
+    {
+      "id": "solo-leveling",
+      "title": "Solo Leveling",
+      "year": 2024,
+      "type": "TV",
+      "episodes": 12,
+      "status": "Ongoing",
+      "score": 8.3,
+      "popularity": 96,
+      "studio": "A-1 Pictures",
+      "genres": [
+        "Action",
+        "Fantasy",
+        "Adventure"
+      ],
+      "dubs": [
+        "Japanese",
+        "English",
+        "Hindi",
+        "Tamil",
+        "Telugu",
+        "Bengali",
+        "Malayalam",
+        "Kannada"
+      ],
+      "verdicts": {
+        "skip": 11,
+        "timepass": 19,
+        "goforit": 37,
+        "perfection": 33
+      },
+      "synopsis": "The weakest hunter alive wakes up with a system that lets him level up without limit.",
+      "palette": [
+        "#4f46e5",
+        "#06b6d4"
+      ],
+      "posterUrl": null,
+      "runtime": "24 min",
+      "slug": "solo-leveling"
+    },
+    {
+      "id": "blue-lock",
+      "title": "Blue Lock",
+      "year": 2022,
+      "type": "TV",
+      "episodes": 24,
+      "status": "Ongoing",
+      "score": 8.2,
+      "popularity": 90,
+      "studio": "8bit",
+      "genres": [
+        "Sports",
+        "Drama",
+        "Shounen"
+      ],
+      "dubs": [
+        "Japanese",
+        "English",
+        "Hindi",
+        "Tamil",
+        "Telugu",
+        "Bengali",
+        "Malayalam",
+        "Kannada"
+      ],
+      "verdicts": {
+        "skip": 14,
+        "timepass": 24,
+        "goforit": 34,
+        "perfection": 28
+      },
+      "synopsis": "300 strikers enter a brutal facility to produce Japan's greatest egoist.",
+      "palette": [
+        "#0ea5e9",
+        "#1e40af"
+      ],
+      "posterUrl": null,
+      "runtime": "24 min",
+      "slug": "blue-lock"
+    },
+    {
+      "id": "haikyuu",
+      "title": "Haikyuu!!",
+      "year": 2014,
+      "type": "TV",
+      "episodes": 25,
+      "status": "Finished",
+      "score": 8.7,
+      "popularity": 89,
+      "studio": "Production I.G",
+      "genres": [
+        "Sports",
+        "Comedy",
+        "Drama"
+      ],
+      "dubs": [
+        "Japanese",
+        "English",
+        "Hindi",
+        "Tamil",
+        "Telugu",
+        "Bengali",
+        "Malayalam"
+      ],
+      "verdicts": {
+        "skip": 3,
+        "timepass": 5,
+        "goforit": 45,
+        "perfection": 47
+      },
+      "synopsis": "A short kid with a huge jump and a genius setter rebuild their high school volleyball team.",
+      "palette": [
+        "#f97316",
+        "#0f172a"
+      ],
+      "posterUrl": null,
+      "runtime": "24 min",
+      "slug": "haikyuu"
+    },
+    {
+      "id": "tokyo-revengers",
+      "title": "Tokyo Revengers",
+      "year": 2021,
+      "type": "TV",
+      "episodes": 24,
+      "status": "Finished",
+      "score": 8.0,
+      "popularity": 88,
+      "studio": "Liden Films",
+      "genres": [
+        "Action",
+        "Drama",
+        "Supernatural"
+      ],
+      "dubs": [
+        "Japanese",
+        "English",
+        "Hindi",
+        "Tamil",
+        "Telugu",
+        "Bengali"
+      ],
+      "verdicts": {
+        "skip": 19,
+        "timepass": 32,
+        "goforit": 29,
+        "perfection": 20
+      },
+      "synopsis": "A dead-end adult time-travels to middle school to save the people he loves.",
+      "palette": [
+        "#facc15",
+        "#111827"
+      ],
+      "posterUrl": null,
+      "runtime": "24 min",
+      "slug": "tokyo-revengers"
+    },
+    {
+      "id": "my-hero-academia",
+      "title": "My Hero Academia",
+      "year": 2016,
+      "type": "TV",
+      "episodes": 13,
+      "status": "Ongoing",
+      "score": 8.2,
+      "popularity": 91,
+      "studio": "Bones",
+      "genres": [
+        "Action",
+        "Superhero",
+        "Shounen"
+      ],
+      "dubs": [
+        "Japanese",
+        "English",
+        "Hindi",
+        "Tamil",
+        "Telugu",
+        "Bengali",
+        "Malayalam",
+        "Kannada"
+      ],
+      "verdicts": {
+        "skip": 14,
+        "timepass": 22,
+        "goforit": 35,
+        "perfection": 29
+      },
+      "synopsis": "In a world of superpowers, a powerless boy inherits the strength of the greatest hero.",
+      "palette": [
+        "#16a34a",
+        "#facc15"
+      ],
+      "posterUrl": null,
+      "runtime": "24 min",
+      "slug": "my-hero-academia"
+    },
+    {
+      "id": "bleach",
+      "title": "Bleach",
+      "year": 2004,
+      "type": "TV",
+      "episodes": 366,
+      "status": "Finished",
+      "score": 8.2,
+      "popularity": 87,
+      "studio": "Pierrot",
+      "genres": [
+        "Action",
+        "Supernatural",
+        "Shounen"
+      ],
+      "dubs": [
+        "Japanese",
+        "English",
+        "Hindi",
+        "Tamil",
+        "Telugu",
+        "Bengali"
+      ],
+      "verdicts": {
+        "skip": 16,
+        "timepass": 25,
+        "goforit": 32,
+        "perfection": 27
+      },
+      "synopsis": "Ichigo Kurosaki becomes a Soul Reaper and defends the living from hollows.",
+      "palette": [
+        "#0f766e",
+        "#111827"
+      ],
+      "posterUrl": null,
+      "runtime": "24 min",
+      "slug": "bleach"
+    },
+    {
+      "id": "vinland-saga",
+      "title": "Vinland Saga",
+      "year": 2019,
+      "type": "TV",
+      "episodes": 24,
+      "status": "Ongoing",
+      "score": 8.8,
+      "popularity": 86,
+      "studio": "Wit Studio",
+      "genres": [
+        "Action",
+        "Historical",
+        "Drama"
+      ],
+      "dubs": [
+        "Japanese",
+        "English",
+        "Hindi",
+        "Tamil",
+        "Telugu"
+      ],
+      "verdicts": {
+        "skip": 2,
+        "timepass": 2,
+        "goforit": 46,
+        "perfection": 50
+      },
+      "synopsis": "A Viking boy raised on revenge slowly learns what a true warrior is.",
+      "palette": [
+        "#57534e",
+        "#b91c1c"
+      ],
+      "posterUrl": null,
+      "runtime": "24 min",
+      "slug": "vinland-saga"
+    },
+    {
+      "id": "mob-psycho",
+      "title": "Mob Psycho 100",
+      "year": 2016,
+      "type": "TV",
+      "episodes": 12,
+      "status": "Finished",
+      "score": 8.6,
+      "popularity": 84,
+      "studio": "Bones",
+      "genres": [
+        "Action",
+        "Comedy",
+        "Supernatural"
+      ],
+      "dubs": [
+        "Japanese",
+        "English",
+        "Hindi",
+        "Tamil",
+        "Telugu"
+      ],
+      "verdicts": {
+        "skip": 5,
+        "timepass": 7,
+        "goforit": 44,
+        "perfection": 44
+      },
+      "synopsis": "An overpowered psychic tries to live an ordinary life and grow as a person.",
+      "palette": [
+        "#22d3ee",
+        "#a855f7"
+      ],
+      "posterUrl": null,
+      "runtime": "24 min",
+      "slug": "mob-psycho"
+    },
+    {
+      "id": "dr-stone",
+      "title": "Dr. Stone",
+      "year": 2019,
+      "type": "TV",
+      "episodes": 24,
+      "status": "Ongoing",
+      "score": 8.3,
+      "popularity": 83,
+      "studio": "TMS Entertainment",
+      "genres": [
+        "Sci-Fi",
+        "Adventure",
+        "Comedy"
+      ],
+      "dubs": [
+        "Japanese",
+        "English",
+        "Hindi",
+        "Tamil",
+        "Telugu",
+        "Bengali"
+      ],
+      "verdicts": {
+        "skip": 11,
+        "timepass": 19,
+        "goforit": 37,
+        "perfection": 33
+      },
+      "synopsis": "After humanity is petrified, a science prodigy rebuilds civilisation from zero.",
+      "palette": [
+        "#10b981",
+        "#0f766e"
+      ],
+      "posterUrl": null,
+      "runtime": "24 min",
+      "slug": "dr-stone"
+    },
+    {
+      "id": "dragon-ball-z",
+      "title": "Dragon Ball Z",
+      "year": 1989,
+      "type": "TV",
+      "episodes": 291,
+      "status": "Finished",
+      "score": 8.2,
+      "popularity": 95,
+      "studio": "Toei Animation",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Comedy"
+      ],
+      "dubs": [
+        "Japanese",
+        "English",
+        "Hindi",
+        "Tamil",
+        "Telugu",
+        "Bengali",
+        "Malayalam",
+        "Kannada"
+      ],
+      "verdicts": {
+        "skip": 16,
+        "timepass": 26,
+        "goforit": 32,
+        "perfection": 26
+      },
+      "synopsis": "Goku defends Earth against Saiyans, androids and gods.",
+      "palette": [
+        "#f59e0b",
+        "#ea580c"
+      ],
+      "posterUrl": null,
+      "runtime": "24 min",
+      "slug": "dragon-ball-z"
+    },
+    {
+      "id": "hunter-x-hunter",
+      "title": "Hunter x Hunter (2011)",
+      "year": 2011,
+      "type": "TV",
+      "episodes": 148,
+      "status": "Finished",
+      "score": 9.0,
+      "popularity": 88,
+      "studio": "Madhouse",
+      "genres": [
+        "Adventure",
+        "Action",
+        "Fantasy"
+      ],
+      "dubs": [
+        "Japanese",
+        "English",
+        "Hindi",
+        "Tamil",
+        "Telugu",
+        "Bengali",
+        "Malayalam"
+      ],
+      "verdicts": {
+        "skip": 3,
+        "timepass": 4,
+        "goforit": 43,
+        "perfection": 50
+      },
+      "synopsis": "Gon becomes a Hunter to find his father and discovers a far stranger world.",
+      "palette": [
+        "#22c55e",
+        "#0ea5e9"
+      ],
+      "posterUrl": null,
+      "runtime": "24 min",
+      "slug": "hunter-x-hunter"
+    },
+    {
+      "id": "steins-gate",
+      "title": "Steins;Gate",
+      "year": 2011,
+      "type": "TV",
+      "episodes": 24,
+      "status": "Finished",
+      "score": 8.8,
+      "popularity": 82,
+      "studio": "White Fox",
+      "genres": [
+        "Sci-Fi",
+        "Thriller",
+        "Drama"
+      ],
+      "dubs": [
+        "Japanese",
+        "English",
+        "Hindi"
+      ],
+      "verdicts": {
+        "skip": 4,
+        "timepass": 6,
+        "goforit": 43,
+        "perfection": 47
+      },
+      "synopsis": "A self-styled mad scientist discovers time travel by accident — and the cost of it.",
+      "palette": [
+        "#64748b",
+        "#7c3aed"
+      ],
+      "posterUrl": null,
+      "runtime": "24 min",
+      "slug": "steins-gate"
+    },
+    {
+      "id": "code-geass",
+      "title": "Code Geass",
+      "year": 2006,
+      "type": "TV",
+      "episodes": 25,
+      "status": "Finished",
+      "score": 8.7,
+      "popularity": 81,
+      "studio": "Sunrise",
+      "genres": [
+        "Action",
+        "Mecha",
+        "Drama"
+      ],
+      "dubs": [
+        "Japanese",
+        "English",
+        "Hindi",
+        "Tamil",
+        "Telugu"
+      ],
+      "verdicts": {
+        "skip": 5,
+        "timepass": 7,
+        "goforit": 43,
+        "perfection": 45
+      },
+      "synopsis": "An exiled prince gains the power to command anyone and starts a rebellion.",
+      "palette": [
+        "#7c3aed",
+        "#facc15"
+      ],
+      "posterUrl": null,
+      "runtime": "24 min",
+      "slug": "code-geass"
+    },
+    {
+      "id": "cowboy-bebop",
+      "title": "Cowboy Bebop",
+      "year": 1998,
+      "type": "TV",
+      "episodes": 26,
+      "status": "Finished",
+      "score": 8.8,
+      "popularity": 79,
+      "studio": "Sunrise",
+      "genres": [
+        "Action",
+        "Sci-Fi",
+        "Drama"
+      ],
+      "dubs": [
+        "Japanese",
+        "English",
+        "Hindi",
+        "Tamil"
+      ],
+      "verdicts": {
+        "skip": 5,
+        "timepass": 9,
+        "goforit": 41,
+        "perfection": 45
+      },
+      "synopsis": "Bounty hunters drift through space to a jazz soundtrack.",
+      "palette": [
+        "#1e3a8a",
+        "#f472b6"
+      ],
+      "posterUrl": null,
+      "runtime": "24 min",
+      "slug": "cowboy-bebop"
+    },
+    {
+      "id": "violet-evergarden",
+      "title": "Violet Evergarden",
+      "year": 2018,
+      "type": "TV",
+      "episodes": 13,
+      "status": "Finished",
+      "score": 8.5,
+      "popularity": 80,
+      "studio": "Kyoto Animation",
+      "genres": [
+        "Drama",
+        "Fantasy",
+        "Slice of Life"
+      ],
+      "dubs": [
+        "Japanese",
+        "English",
+        "Hindi",
+        "Tamil",
+        "Telugu"
+      ],
+      "verdicts": {
+        "skip": 12,
+        "timepass": 19,
+        "goforit": 35,
+        "perfection": 34
+      },
+      "synopsis": "A former child soldier writes letters for others and learns what love means.",
+      "palette": [
+        "#f5d0fe",
+        "#7c3aed"
+      ],
+      "posterUrl": null,
+      "runtime": "24 min",
+      "slug": "violet-evergarden"
+    },
+    {
+      "id": "your-name",
+      "title": "Your Name.",
+      "year": 2016,
+      "type": "Movie",
+      "episodes": 1,
+      "status": "Finished",
+      "score": 8.5,
+      "popularity": 90,
+      "studio": "CoMix Wave Films",
+      "genres": [
+        "Romance",
+        "Fantasy",
+        "Drama"
+      ],
+      "dubs": [
+        "Japanese",
+        "English",
+        "Hindi",
+        "Tamil",
+        "Telugu",
+        "Bengali",
+        "Malayalam",
+        "Kannada"
+      ],
+      "verdicts": {
+        "skip": 10,
+        "timepass": 17,
+        "goforit": 37,
+        "perfection": 36
+      },
+      "synopsis": "Two teenagers keep waking up in each other's bodies, across distance and time.",
+      "palette": [
+        "#60a5fa",
+        "#f472b6"
+      ],
+      "posterUrl": null,
+      "runtime": "1h 47m",
+      "slug": "your-name"
+    },
+    {
+      "id": "spirited-away",
+      "title": "Spirited Away",
+      "year": 2001,
+      "type": "Movie",
+      "episodes": 1,
+      "status": "Finished",
+      "score": 8.6,
+      "popularity": 88,
+      "studio": "Studio Ghibli",
+      "genres": [
+        "Fantasy",
+        "Adventure",
+        "Drama"
+      ],
+      "dubs": [
+        "Japanese",
+        "English",
+        "Hindi",
+        "Tamil",
+        "Telugu",
+        "Bengali",
+        "Malayalam",
+        "Kannada"
+      ],
+      "verdicts": {
+        "skip": 7,
+        "timepass": 12,
+        "goforit": 40,
+        "perfection": 41
+      },
+      "synopsis": "A girl must work in a spirit bathhouse to free her parents.",
+      "palette": [
+        "#0ea5e9",
+        "#dc2626"
+      ],
+      "posterUrl": null,
+      "runtime": "1h 47m",
+      "slug": "spirited-away"
+    },
+    {
+      "id": "suzume",
+      "title": "Suzume",
+      "year": 2022,
+      "type": "Movie",
+      "episodes": 1,
+      "status": "Finished",
+      "score": 8.0,
+      "popularity": 85,
+      "studio": "CoMix Wave Films",
+      "genres": [
+        "Fantasy",
+        "Romance",
+        "Adventure"
+      ],
+      "dubs": [
+        "Japanese",
+        "English",
+        "Hindi",
+        "Tamil",
+        "Telugu"
+      ],
+      "verdicts": {
+        "skip": 16,
+        "timepass": 25,
+        "goforit": 34,
+        "perfection": 25
+      },
+      "synopsis": "A girl and a talking chair close doors across Japan before disaster spills out.",
+      "palette": [
+        "#38bdf8",
+        "#fb923c"
+      ],
+      "posterUrl": null,
+      "runtime": "1h 47m",
+      "slug": "suzume"
+    },
+    {
+      "id": "weathering-with-you",
+      "title": "Weathering with You",
+      "year": 2019,
+      "type": "Movie",
+      "episodes": 1,
+      "status": "Finished",
+      "score": 8.2,
+      "popularity": 84,
+      "studio": "CoMix Wave Films",
+      "genres": [
+        "Romance",
+        "Fantasy",
+        "Drama"
+      ],
+      "dubs": [
+        "Japanese",
+        "English",
+        "Hindi",
+        "Tamil",
+        "Telugu"
+      ],
+      "verdicts": {
+        "skip": 13,
+        "timepass": 21,
+        "goforit": 36,
+        "perfection": 30
+      },
+      "synopsis": "A runaway meets a girl who can clear the sky.",
+      "palette": [
+        "#7dd3fc",
+        "#f59e0b"
+      ],
+      "posterUrl": null,
+      "runtime": "1h 47m",
+      "slug": "weathering-with-you"
+    },
+    {
+      "id": "one-punch-man",
+      "title": "One Punch Man",
+      "year": 2015,
+      "type": "TV",
+      "episodes": 12,
+      "status": "Ongoing",
+      "score": 8.7,
+      "popularity": 93,
+      "studio": "Madhouse",
+      "genres": [
+        "Action",
+        "Comedy",
+        "Superhero"
+      ],
+      "dubs": [
+        "Japanese",
+        "English",
+        "Hindi",
+        "Tamil",
+        "Telugu",
+        "Bengali",
+        "Malayalam",
+        "Kannada"
+      ],
+      "verdicts": {
+        "skip": 7,
+        "timepass": 11,
+        "goforit": 40,
+        "perfection": 42
+      },
+      "synopsis": "A hero who wins every fight in one punch is bored out of his mind.",
+      "palette": [
+        "#facc15",
+        "#dc2626"
+      ],
+      "posterUrl": null,
+      "runtime": "24 min",
+      "slug": "one-punch-man"
+    },
+    {
+      "id": "black-clover",
+      "title": "Black Clover",
+      "year": 2017,
+      "type": "TV",
+      "episodes": 170,
+      "status": "Finished",
+      "score": 8.1,
+      "popularity": 86,
+      "studio": "Pierrot",
+      "genres": [
+        "Action",
+        "Fantasy",
+        "Shounen"
+      ],
+      "dubs": [
+        "Japanese",
+        "English",
+        "Hindi",
+        "Tamil",
+        "Telugu",
+        "Bengali"
+      ],
+      "verdicts": {
+        "skip": 16,
+        "timepass": 25,
+        "goforit": 33,
+        "perfection": 26
+      },
+      "synopsis": "A boy born without magic vows to become the Wizard King.",
+      "palette": [
+        "#111827",
+        "#16a34a"
+      ],
+      "posterUrl": null,
+      "runtime": "24 min",
+      "slug": "black-clover"
+    },
+    {
+      "id": "re-zero",
+      "title": "Re:Zero - Starting Life in Another World",
+      "year": 2016,
+      "type": "TV",
+      "episodes": 25,
+      "status": "Ongoing",
+      "score": 8.6,
+      "popularity": 87,
+      "studio": "White Fox",
+      "genres": [
+        "Fantasy",
+        "Thriller",
+        "Drama"
+      ],
+      "dubs": [
+        "Japanese",
+        "English",
+        "Hindi",
+        "Tamil",
+        "Telugu"
+      ],
+      "verdicts": {
+        "skip": 8,
+        "timepass": 14,
+        "goforit": 39,
+        "perfection": 39
+      },
+      "synopsis": "Summoned to another world, Subaru can only rewind by dying.",
+      "palette": [
+        "#a78bfa",
+        "#1e1b4b"
+      ],
+      "posterUrl": null,
+      "runtime": "24 min",
+      "slug": "re-zero"
+    },
+    {
+      "id": "frieren",
+      "title": "Frieren: Beyond Journey's End",
+      "year": 2023,
+      "type": "TV",
+      "episodes": 28,
+      "status": "Ongoing",
+      "score": 9.0,
+      "popularity": 92,
+      "studio": "Madhouse",
+      "genres": [
+        "Fantasy",
+        "Adventure",
+        "Drama"
+      ],
+      "dubs": [
+        "Japanese",
+        "English",
+        "Hindi",
+        "Tamil",
+        "Telugu",
+        "Bengali",
+        "Malayalam",
+        "Kannada"
+      ],
+      "verdicts": {
+        "skip": 2,
+        "timepass": 2,
+        "goforit": 42,
+        "perfection": 54
+      },
+      "synopsis": "An elf mage outlives her party and slowly learns why humans matter.",
+      "palette": [
+        "#34d399",
+        "#0f766e"
+      ],
+      "posterUrl": null,
+      "runtime": "24 min",
+      "slug": "frieren"
+    },
+    {
+      "id": "dandadan",
+      "title": "Dandadan",
+      "year": 2024,
+      "type": "TV",
+      "episodes": 12,
+      "status": "Ongoing",
+      "score": 8.5,
+      "popularity": 89,
+      "studio": "Science SARU",
+      "genres": [
+        "Action",
+        "Comedy",
+        "Supernatural"
+      ],
+      "dubs": [
+        "Japanese",
+        "English",
+        "Hindi",
+        "Tamil",
+        "Telugu",
+        "Bengali"
+      ],
+      "verdicts": {
+        "skip": 6,
+        "timepass": 11,
+        "goforit": 42,
+        "perfection": 41
+      },
+      "synopsis": "An occult nerd and a ghost-obsessed girl lose their powers and their dignity.",
+      "palette": [
+        "#f472b6",
+        "#22d3ee"
+      ],
+      "posterUrl": null,
+      "runtime": "24 min",
+      "slug": "dandadan"
+    },
+    {
+      "id": "fire-force",
+      "title": "Fire Force",
+      "year": 2019,
+      "type": "TV",
+      "episodes": 24,
+      "status": "Ongoing",
+      "score": 7.9,
+      "popularity": 76,
+      "studio": "David Production",
+      "genres": [
+        "Action",
+        "Supernatural",
+        "Shounen"
+      ],
+      "dubs": [
+        "Japanese",
+        "English",
+        "Hindi",
+        "Tamil",
+        "Telugu"
+      ],
+      "verdicts": {
+        "skip": 16,
+        "timepass": 27,
+        "goforit": 34,
+        "perfection": 23
+      },
+      "synopsis": "Special firefighters battle spontaneous human combustion in Tokyo.",
+      "palette": [
+        "#f97316",
+        "#dc2626"
+      ],
+      "posterUrl": null,
+      "runtime": "24 min",
+      "slug": "fire-force"
+    },
+    {
+      "id": "konosuba",
+      "title": "KonoSuba",
+      "year": 2016,
+      "type": "TV",
+      "episodes": 10,
+      "status": "Ongoing",
+      "score": 8.3,
+      "popularity": 78,
+      "studio": "Studio Deen",
+      "genres": [
+        "Comedy",
+        "Fantasy",
+        "Adventure"
+      ],
+      "dubs": [
+        "Japanese",
+        "English",
+        "Hindi",
+        "Tamil",
+        "Telugu"
+      ],
+      "verdicts": {
+        "skip": 11,
+        "timepass": 18,
+        "goforit": 38,
+        "perfection": 33
+      },
+      "synopsis": "A dead shut-in is sent to a fantasy world with the worst party imaginable.",
+      "palette": [
+        "#60a5fa",
+        "#facc15"
+      ],
+      "posterUrl": null,
+      "runtime": "24 min",
+      "slug": "konosuba"
+    },
+    {
+      "id": "overlord",
+      "title": "Overlord",
+      "year": 2015,
+      "type": "TV",
+      "episodes": 13,
+      "status": "Ongoing",
+      "score": 7.9,
+      "popularity": 75,
+      "studio": "Madhouse",
+      "genres": [
+        "Fantasy",
+        "Action",
+        "Adventure"
+      ],
+      "dubs": [
+        "Japanese",
+        "English",
+        "Hindi",
+        "Tamil",
+        "Telugu"
+      ],
+      "verdicts": {
+        "skip": 16,
+        "timepass": 27,
+        "goforit": 34,
+        "perfection": 23
+      },
+      "synopsis": "A player trapped in a game becomes the skeletal overlord of a new world.",
+      "palette": [
+        "#4c1d95",
+        "#a78bfa"
+      ],
+      "posterUrl": null,
+      "runtime": "24 min",
+      "slug": "overlord"
+    },
+    {
+      "id": "apothecary-diaries",
+      "title": "The Apothecary Diaries",
+      "year": 2023,
+      "type": "TV",
+      "episodes": 24,
+      "status": "Ongoing",
+      "score": 8.7,
+      "popularity": 83,
+      "studio": "OLM",
+      "genres": [
+        "Mystery",
+        "Drama",
+        "Historical"
+      ],
+      "dubs": [
+        "Japanese",
+        "English",
+        "Hindi",
+        "Tamil",
+        "Telugu",
+        "Bengali"
+      ],
+      "verdicts": {
+        "skip": 7,
+        "timepass": 12,
+        "goforit": 39,
+        "perfection": 42
+      },
+      "synopsis": "A sharp-eyed apothecary solves poisonings inside the imperial palace.",
+      "palette": [
+        "#b91c1c",
+        "#f5d0fe"
+      ],
+      "posterUrl": null,
+      "runtime": "24 min",
+      "slug": "apothecary-diaries"
+    },
+    {
+      "id": "kaiju-no-8",
+      "title": "Kaiju No. 8",
+      "year": 2024,
+      "type": "TV",
+      "episodes": 12,
+      "status": "Ongoing",
+      "score": 8.0,
+      "popularity": 85,
+      "studio": "Production I.G",
+      "genres": [
+        "Action",
+        "Sci-Fi",
+        "Shounen"
+      ],
+      "dubs": [
+        "Japanese",
+        "English",
+        "Hindi",
+        "Tamil",
+        "Telugu",
+        "Bengali",
+        "Malayalam",
+        "Kannada"
+      ],
+      "verdicts": {
+        "skip": 19,
+        "timepass": 32,
+        "goforit": 29,
+        "perfection": 20
+      },
+      "synopsis": "A kaiju cleanup worker becomes a kaiju himself and joins the defence force.",
+      "palette": [
+        "#059669",
+        "#111827"
+      ],
+      "posterUrl": null,
+      "runtime": "24 min",
+      "slug": "kaiju-no-8"
+    },
+    {
+      "id": "mashle",
+      "title": "Mashle: Magic and Muscles",
+      "year": 2023,
+      "type": "TV",
+      "episodes": 12,
+      "status": "Ongoing",
+      "score": 7.8,
+      "popularity": 74,
+      "studio": "A-1 Pictures",
+      "genres": [
+        "Comedy",
+        "Fantasy",
+        "Action"
+      ],
+      "dubs": [
+        "Japanese",
+        "English",
+        "Hindi",
+        "Tamil",
+        "Telugu"
+      ],
+      "verdicts": {
+        "skip": 19,
+        "timepass": 30,
+        "goforit": 32,
+        "perfection": 19
+      },
+      "synopsis": "In a world of magic, a boy with zero magic and absurd muscles enrols in magic school.",
+      "palette": [
+        "#a3e635",
+        "#4d7c0f"
+      ],
+      "posterUrl": null,
+      "runtime": "24 min",
+      "slug": "mashle"
+    }
+  ]
+}
